@@ -18,16 +18,16 @@ public class Main {
 
     public void tampil(String par){
         if(logger.isDebugEnabled()){
-            logger.debug("Ini adalah message : "+par);
+            logger.debug("Ini adalah debug message : "+par);
         }
         
         if (logger.isInfoEnabled()) {
-            logger.info("ini adalah message : "+par);
+            logger.info("ini adalah info message : "+par);
         }
         
-        logger.warn("Ini adalah info message : "+par);
-        logger.error("Ini adalah info message : "+par);
-        logger.fatal("Ini adalah info message : "+par);
+        logger.warn("Ini adalah warn message : "+par);
+        logger.error("Ini adalah error message : "+par);
+        logger.fatal("Ini adalah fatal message : "+par);
     }
     
     public static void main(String[] args) {
