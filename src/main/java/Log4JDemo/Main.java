@@ -14,18 +14,28 @@ import org.apache.log4j.Logger;
  */
 public class Main {
     
-    private static final Logger logger = Logger.getLogger(mainDao.class);
+    private static final Logger logger = Logger.getLogger(Main.class);
+
+    public void tampil(String par){
+        if(logger.isDebugEnabled()){
+            logger.debug("Ini adalah message : "+par);
+        }
+        
+        if (logger.isInfoEnabled()) {
+            logger.info("ini adalah message : "+par);
+        }
+        
+        logger.warn("Ini adalah info message : "+par);
+        logger.error("Ini adalah info message : "+par);
+        logger.fatal("Ini adalah info message : "+par);
+    }
     
     public static void main(String[] args) {
         
         BasicConfigurator.configure();
         
-        logger.debug("Ini adalah debug message : Contoh log4j");        
-        logger.info("Ini adalah info message : Contoh log4j");
-        logger.warn("Ini adalah info message : Contoh log4j");
-        logger.error("Ini adalah info message : Contoh log4j");
-        logger.fatal("Ini adalah info message : Contoh log4j");
-        
+        Main mn = new Main();
+        mn.tampil("Contoh Log4J");
       
     }
 }
